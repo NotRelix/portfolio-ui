@@ -42,6 +42,13 @@ jobs:
       - name: Setup GitHub Pages ⚙️
         uses: actions/configure-pages@v4
 
+      - name: 'Create env file'
+        run: |
+          touch .env
+          echo assetPrefix="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/" >> .env
+          echo basePath="/${{ github.event.repository.name }}" >> .env
+          cat .env
+
       - name: Build Next.js App 🏗️
         run: pnpm next build
 

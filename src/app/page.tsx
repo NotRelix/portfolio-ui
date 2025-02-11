@@ -81,7 +81,7 @@ export default function HomePage() {
       <header className="flex flex-col justify-center items-center gap-4 p-8">
         <div className="relative size-32 rounded-full overflow-clip">
           <Image
-            src={"/portfolio-ui/profile-pic.jpg"}
+            src={"/profile-pic.jpg"}
             fill
             className="w-full h-full object-cover object-center"
             alt="Reece Lim"
@@ -132,7 +132,7 @@ export default function HomePage() {
           </div>
           <div className="flex-grow-[9] bg-neutral-500 relative overflow-hidden">
             <Image
-              src={"/portfolio-ui/hero-banner.jpg"}
+              src={"/hero-banner.jpg"}
               fill
               className="object-cover object-top"
               alt="background scenery image"
@@ -179,7 +179,7 @@ export default function HomePage() {
           <div className="grid grid-cols-3 grid-rows-2 h-[36rem] w-full gap-2">
             <div className="col-span-1 row-span-2 relative w-full h-full overflow-hidden rounded-xl">
               <Image
-                src="/portfolio-ui/pictures/kyoto-japan.jpeg"
+                src="/pictures/kyoto-japan.jpeg"
                 fill
                 alt="a cozy pavillion in japan"
                 className="object-cover"
@@ -192,7 +192,7 @@ export default function HomePage() {
             <div className="col-span-1 row-span-1">
               <div className="w-full h-full relative overflow-clip rounded-xl">
                 <Image
-                  src="/portfolio-ui/pictures/shanghai-china.jpeg"
+                  src="/pictures/shanghai-china.jpeg"
                   fill
                   alt="shanghai, china's city proper scenery"
                   className="object-cover"
@@ -206,7 +206,7 @@ export default function HomePage() {
             <div className="col-span-1 row-span-1">
               <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
                 <Image
-                  src="/portfolio-ui/pictures/el-nido-philippines.jpeg"
+                  src="/pictures/el-nido-philippines.jpeg"
                   fill
                   alt="a beach in el nido in the philippines"
                   className="object-cover"
@@ -220,7 +220,7 @@ export default function HomePage() {
             <div className="col-span-1 row-span-1">
               <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
                 <Image
-                  src="/portfolio-ui/pictures/new-york-usa.jpeg"
+                  src="/pictures/new-york-usa.jpeg"
                   fill
                   alt="city proper in new york, usa with tall buildings"
                   className="object-cover"
@@ -234,7 +234,7 @@ export default function HomePage() {
             <div className="col-span-1 row-span-1">
               <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
                 <Image
-                  src="/portfolio-ui/pictures/london-uk.jpeg"
+                  src="/pictures/london-uk.jpeg"
                   fill
                   alt="driving in london in a rainy day"
                   className="object-cover"

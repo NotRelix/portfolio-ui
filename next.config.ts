@@ -1,13 +1,15 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+
+const assetPrefix = process.env.assetPrefix ? process.env.AssetPrefix : '';
+const basePath = process.env.basePath ? process.env.BasePath : '';
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: "export",
-  basePath: "/portfolio-ui",
-  assetPrefix: "/portfolio-ui",
+  output: 'export',
+  basePath,
+  assetPrefix,
+
   images: {
     unoptimized: true,
-    // domains: ['github.com'],
   },
 };
 
