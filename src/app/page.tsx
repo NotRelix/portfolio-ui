@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/my-image"
 import { Home, Edit, Globe, Info } from "lucide-react";
 
 import { MdEmail } from "react-icons/md";
