@@ -81,7 +81,7 @@ export default function HomePage() {
       <header className="flex flex-col justify-center items-center gap-4 p-8">
         <div className="relative size-32 rounded-full overflow-clip">
           <Image
-            src={"/profile-pic.jpg"}
+            src={"/portfolio-ui/profile-pic.jpg"}
             fill
             className="w-full h-full object-cover object-center"
             alt="Reece Lim"
@@ -130,11 +130,11 @@ export default function HomePage() {
               })}
             </div>
           </div>
-          <div className="flex-grow-[9] bg-neutral-500 relative overflow-clip">
+          <div className="flex-grow-[9] bg-neutral-500 relative overflow-hidden">
             <Image
-              src={"/hero-banner.jpg"}
+              src={"/portfolio-ui/hero-banner.jpg"}
               fill
-              className="w-full h-full object-cover object-top"
+              className="object-cover object-top"
               alt="background scenery image"
             ></Image>
           </div>
@@ -161,9 +161,9 @@ export default function HomePage() {
             Equipments
           </h1>
           <div className="flex gap-2">
-            {equipments.map((item) => {
+            {equipments.map((item, index) => {
               return (
-                <div className="bg-neutral-800/50 p-4 flex flex-col gap-4 flex-1 hover:bg-neutral-700 transition-all ease-in-out">
+                <div className="bg-neutral-800/50 p-4 flex flex-col gap-4 flex-1 hover:bg-neutral-700 transition-all ease-in-out" key={index}>
                   <item.icon className="size-12" />
                   <p className="font-bold">{item.title}</p>
                 </div>
@@ -179,7 +179,7 @@ export default function HomePage() {
           <div className="grid grid-cols-3 grid-rows-2 h-[36rem] w-full gap-2">
             <div className="col-span-1 row-span-2 relative w-full h-full overflow-hidden rounded-xl">
               <Image
-                src="/pictures/kyoto-japan.jpeg"
+                src="/portfolio-ui/pictures/kyoto-japan.jpeg"
                 fill
                 alt="a cozy pavillion in japan"
                 className="object-cover"
@@ -192,7 +192,7 @@ export default function HomePage() {
             <div className="col-span-1 row-span-1">
               <div className="w-full h-full relative overflow-clip rounded-xl">
                 <Image
-                  src="/pictures/shanghai-china.jpeg"
+                  src="/portfolio-ui/pictures/shanghai-china.jpeg"
                   fill
                   alt="shanghai, china's city proper scenery"
                   className="object-cover"
@@ -206,7 +206,7 @@ export default function HomePage() {
             <div className="col-span-1 row-span-1">
               <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
                 <Image
-                  src="/pictures/el-nido-philippines.jpeg"
+                  src="/portfolio-ui/pictures/el-nido-philippines.jpeg"
                   fill
                   alt="a beach in el nido in the philippines"
                   className="object-cover"
@@ -220,7 +220,7 @@ export default function HomePage() {
             <div className="col-span-1 row-span-1">
               <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
                 <Image
-                  src="/pictures/new-york-usa.jpeg"
+                  src="/portfolio-ui/pictures/new-york-usa.jpeg"
                   fill
                   alt="city proper in new york, usa with tall buildings"
                   className="object-cover"
@@ -234,7 +234,7 @@ export default function HomePage() {
             <div className="col-span-1 row-span-1">
               <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
                 <Image
-                  src="/pictures/london-uk.jpeg"
+                  src="/portfolio-ui/pictures/london-uk.jpeg"
                   fill
                   alt="driving in london in a rainy day"
                   className="object-cover"

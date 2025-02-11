@@ -2,8 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  output: "export",
+  basePath: "/portfolio-ui",
+  assetPrefix: "/portfolio-ui",
   images: {
-    domains: ['github.com'],
+    unoptimized: true,
+    // domains: ['github.com'],
   },
 };
 
