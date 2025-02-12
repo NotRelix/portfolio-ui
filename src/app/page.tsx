@@ -1,47 +1,17 @@
-import Image from "@/components/my-image"
+import Image from "@/components/my-image";
 import { Home, Edit, Globe, Info } from "lucide-react";
-
-import { MdEmail } from "react-icons/md";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaFacebookF, FaLaptop } from "react-icons/fa";
+import Link from "next/link";
+import Navbar from "@/components/layout/Navbar";
+import ProfileCard from "@/components/layout/ProfileCard";
+import { FaLaptop } from "react-icons/fa";
 import { HiMiniCodeBracket } from "react-icons/hi2";
 import { IoLogoJavascript, IoMdPhonePortrait } from "react-icons/io";
 import { FiDatabase } from "react-icons/fi";
 import { FaComputer, FaLocationDot } from "react-icons/fa6";
 import { BsEarbuds } from "react-icons/bs";
+import Header from "@/components/layout/Header";
 
 export default function HomePage() {
-  const navLinks = [
-    {
-      icon: Home,
-      title: "Home",
-    },
-    {
-      icon: Edit,
-      title: "Edit",
-    },
-    {
-      icon: Globe,
-      title: "Friends",
-    },
-    {
-      icon: Info,
-      title: "Info",
-    },
-  ];
-
-  const contacts = [
-    {
-      icon: MdEmail,
-    },
-    {
-      icon: AiFillInstagram,
-    },
-    {
-      icon: FaFacebookF,
-    },
-  ];
-
   const skills = [
     {
       icon: HiMiniCodeBracket,
@@ -77,177 +47,118 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="flex flex-col w-full sm:max-w-7xl mx-auto">
-      <header className="flex flex-col justify-center items-center gap-4 p-8">
-        <div className="relative size-32 rounded-full overflow-clip">
-          <Image
-            src={"/profile-pic.jpg"}
-            fill
-            className="w-full h-full object-cover object-center"
-            alt="Reece Lim"
-          ></Image>
-        </div>
-        <h1 className="text-3xl font-bold">Loading</h1>
-        <p>A clever person solves a problem. A wise person avoids it.</p>
-      </header>
-      <main className="flex flex-col gap-2">
-        <nav className="bg-neutral-900 h-12 flex justify-center items-center">
-          {navLinks.map((item, index) => {
+    <>
+      <div className="bg-neutral-900 p-8 flex flex-col gap-4">
+        <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
+          Skills
+        </h1>
+        <div className="flex gap-2">
+          {skills.map((item, index) => {
             return (
-              <button
+              <div
+                className="bg-neutral-800/50 p-4 flex flex-col gap-4 flex-1 hover:bg-neutral-700 transition-all ease-in-out"
                 key={index}
-                className="flex items-center gap-1 p-2 px-3 hover:bg-neutral-600 transition-all duration-300 ease-in-out h-full"
               >
-                <item.icon className="size-5" />
-                {item.title}
-              </button>
+                <item.icon className="size-12" />
+                <p className="font-bold">{item.title}</p>
+              </div>
             );
           })}
-        </nav>
-
+        </div>
+      </div>
+      <div className="bg-neutral-900 p-8 flex flex-col gap-4">
+        <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
+          Equipments
+        </h1>
         <div className="flex gap-2">
-          <div className="bg-neutral-900 flex-grow-[1] p-6 flex flex-col items-center gap-4">
-            <div className="relative overflow-clip size-24 rounded-full">
-              <Image
-                src={"https://github.com/NotRelix.png"}
-                fill
-                className="w-full h-full object-cover object-center"
-                alt="profile picture"
-              ></Image>
-            </div>
-            <h1 className="text-3xl font-bold">Reece Lim</h1>
-            <p className="font-bold">hi there</p>
-            <div className="flex gap-2">
-              {contacts.map((item, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="border-2 rounded-full hover:bg-neutral-500 transition-all ease-in-out"
-                  >
-                    <item.icon className="size-10 p-2"></item.icon>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className="flex-grow-[9] bg-neutral-500 relative overflow-hidden">
+          {equipments.map((item, index) => {
+            return (
+              <div
+                className="bg-neutral-800/50 p-4 flex flex-col gap-4 flex-1 hover:bg-neutral-700 transition-all ease-in-out"
+                key={index}
+              >
+                <item.icon className="size-12" />
+                <p className="font-bold">{item.title}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="bg-neutral-900 p-8 flex flex-col gap-4">
+        <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
+          Cool Pictures
+        </h1>
+        <div className="grid grid-cols-3 grid-rows-2 h-[36rem] w-full gap-2">
+          <div className="col-span-1 row-span-2 relative w-full h-full overflow-hidden rounded-xl">
             <Image
-              src={"/hero-banner.jpg"}
+              src="/pictures/kyoto-japan.jpeg"
               fill
-              className="object-cover object-top"
-              alt="background scenery image"
-            ></Image>
+              alt="a cozy pavillion in japan"
+              className="object-cover"
+            />
+            <span className="absolute bottom-2 left-2 p-2 items-center rounded-xl bg-neutral-900/50 backdrop-blur-sm flex gap-2">
+              <FaLocationDot />
+              <span>Kyoto, Japan</span>
+            </span>
           </div>
-        </div>
-
-        <div className="bg-neutral-900 p-8 flex flex-col gap-4">
-          <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
-            Skills
-          </h1>
-          <div className="flex gap-2">
-            {skills.map((item, index) => {
-              return (
-                <div className="bg-neutral-800/50 p-4 flex flex-col gap-4 flex-1 hover:bg-neutral-700 transition-all ease-in-out" key={index}>
-                  <item.icon className="size-12" />
-                  <p className="font-bold">{item.title}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="bg-neutral-900 p-8 flex flex-col gap-4">
-          <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
-            Equipments
-          </h1>
-          <div className="flex gap-2">
-            {equipments.map((item, index) => {
-              return (
-                <div className="bg-neutral-800/50 p-4 flex flex-col gap-4 flex-1 hover:bg-neutral-700 transition-all ease-in-out" key={index}>
-                  <item.icon className="size-12" />
-                  <p className="font-bold">{item.title}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="bg-neutral-900 p-8 flex flex-col gap-4">
-          <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
-            Cool Pictures
-          </h1>
-          <div className="grid grid-cols-3 grid-rows-2 h-[36rem] w-full gap-2">
-            <div className="col-span-1 row-span-2 relative w-full h-full overflow-hidden rounded-xl">
+          <div className="col-span-1 row-span-1">
+            <div className="w-full h-full relative overflow-clip rounded-xl">
               <Image
-                src="/pictures/kyoto-japan.jpeg"
+                src="/pictures/shanghai-china.jpeg"
                 fill
-                alt="a cozy pavillion in japan"
+                alt="shanghai, china's city proper scenery"
                 className="object-cover"
               />
               <span className="absolute bottom-2 left-2 p-2 items-center rounded-xl bg-neutral-900/50 backdrop-blur-sm flex gap-2">
                 <FaLocationDot />
-                <span>Kyoto, Japan</span>
+                <span>Shanghai, China</span>
               </span>
             </div>
-            <div className="col-span-1 row-span-1">
-              <div className="w-full h-full relative overflow-clip rounded-xl">
-                <Image
-                  src="/pictures/shanghai-china.jpeg"
-                  fill
-                  alt="shanghai, china's city proper scenery"
-                  className="object-cover"
-                />
-                <span className="absolute bottom-2 left-2 p-2 items-center rounded-xl bg-neutral-900/50 backdrop-blur-sm flex gap-2">
-                  <FaLocationDot />
-                  <span>Shanghai, China</span>
-                </span>
-              </div>
+          </div>
+          <div className="col-span-1 row-span-1">
+            <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
+              <Image
+                src="/pictures/el-nido-philippines.jpeg"
+                fill
+                alt="a beach in el nido in the philippines"
+                className="object-cover"
+              />
+              <span className="absolute bottom-2 left-2 p-2 items-center rounded-xl bg-neutral-900/50 backdrop-blur-sm flex gap-2">
+                <FaLocationDot />
+                <span>El Nido, Philippines</span>
+              </span>
             </div>
-            <div className="col-span-1 row-span-1">
-              <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
-                <Image
-                  src="/pictures/el-nido-philippines.jpeg"
-                  fill
-                  alt="a beach in el nido in the philippines"
-                  className="object-cover"
-                />
-                <span className="absolute bottom-2 left-2 p-2 items-center rounded-xl bg-neutral-900/50 backdrop-blur-sm flex gap-2">
-                  <FaLocationDot />
-                  <span>El Nido, Philippines</span>
-                </span>
-              </div>
+          </div>
+          <div className="col-span-1 row-span-1">
+            <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
+              <Image
+                src="/pictures/new-york-usa.jpeg"
+                fill
+                alt="city proper in new york, usa with tall buildings"
+                className="object-cover"
+              />
+              <span className="absolute bottom-2 left-2 p-2 items-center rounded-xl bg-neutral-900/50 backdrop-blur-sm flex gap-2">
+                <FaLocationDot />
+                <span>New York, USA</span>
+              </span>
             </div>
-            <div className="col-span-1 row-span-1">
-              <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
-                <Image
-                  src="/pictures/new-york-usa.jpeg"
-                  fill
-                  alt="city proper in new york, usa with tall buildings"
-                  className="object-cover"
-                />
-                <span className="absolute bottom-2 left-2 p-2 items-center rounded-xl bg-neutral-900/50 backdrop-blur-sm flex gap-2">
-                  <FaLocationDot />
-                  <span>New York, USA</span>
-                </span>
-              </div>
-            </div>
-            <div className="col-span-1 row-span-1">
-              <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
-                <Image
-                  src="/pictures/london-uk.jpeg"
-                  fill
-                  alt="driving in london in a rainy day"
-                  className="object-cover"
-                />
-                <span className="absolute bottom-2 left-2 p-2 items-center rounded-xl bg-neutral-900/50 backdrop-blur-sm flex gap-2">
-                  <FaLocationDot />
-                  <span>London, UK</span>
-                </span>
-              </div>
+          </div>
+          <div className="col-span-1 row-span-1">
+            <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
+              <Image
+                src="/pictures/london-uk.jpeg"
+                fill
+                alt="driving in london in a rainy day"
+                className="object-cover"
+              />
+              <span className="absolute bottom-2 left-2 p-2 items-center rounded-xl bg-neutral-900/50 backdrop-blur-sm flex gap-2">
+                <FaLocationDot />
+                <span>London, UK</span>
+              </span>
             </div>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </>
   );
 }
