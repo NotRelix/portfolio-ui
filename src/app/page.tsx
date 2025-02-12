@@ -5,6 +5,7 @@ import { IoLogoJavascript, IoMdPhonePortrait } from "react-icons/io";
 import { FiDatabase } from "react-icons/fi";
 import { FaComputer, FaLocationDot } from "react-icons/fa6";
 import { BsEarbuds } from "react-icons/bs";
+import ProfileCard from "@/components/layout/ProfileCard";
 
 export default function HomePage() {
   const skills = [
@@ -43,11 +44,22 @@ export default function HomePage() {
 
   return (
     <>
+      <div className="flex gap-2 md:flex-row flex-col h-auto">
+        <ProfileCard />
+        <div className="flex-grow-[9] bg-neutral-900 relative overflow-hidden md:h-auto h-52">
+          <Image
+            src={"/hero-banner.jpg"}
+            fill
+            className="object-cover object-top"
+            alt="background scenery image"
+          ></Image>
+        </div>
+      </div>
       <div className="bg-neutral-900 p-8 flex flex-col gap-4">
         <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
           Skills
         </h1>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {skills.map((item, index) => {
             return (
               <div
@@ -65,7 +77,7 @@ export default function HomePage() {
         <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
           Equipments
         </h1>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {equipments.map((item, index) => {
             return (
               <div

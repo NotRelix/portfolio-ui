@@ -18,9 +18,9 @@ const ProfileCard = () => {
   ];
 
   return (
-    <div className="flex gap-2">
-      <div className="bg-neutral-900 flex-grow-[1] p-6 flex flex-col items-center gap-4">
-        <div className="relative overflow-clip size-24 rounded-full">
+    <div className="bg-neutral-900 flex-grow-[1] p-6 flex md:flex-col items-center gap-4 md:justify-center">
+      <div className="flex flex-col md:items-center gap-2 mr-auto md:m-auto">
+        <div className="relative overflow-clip size-24 md:rounded-full rounded-2xl">
           <Image
             src={"https://github.com/NotRelix.png"}
             fill
@@ -29,27 +29,21 @@ const ProfileCard = () => {
           ></Image>
         </div>
         <h1 className="text-3xl font-bold">Reece Lim</h1>
-        <p className="font-bold">hi there</p>
+      </div>
+      <div className="mr-auto md:m-auto justify-start flex flex-col gap-2">
+        <p className="font-bold text-2xl md:text-base md:text-center">My Socials</p>
         <div className="flex gap-2">
           {contacts.map((item, index) => {
             return (
               <div
                 key={index}
-                className="border-2 rounded-full hover:bg-neutral-500 transition-all ease-in-out"
+                className="border-2 md:rounded-full rounded-xl hover:bg-neutral-500 transition-all ease-in-out"
               >
                 <item.icon className="size-10 p-2"></item.icon>
               </div>
             );
           })}
         </div>
-      </div>
-      <div className="flex-grow-[9] bg-neutral-500 relative overflow-hidden">
-        <Image
-          src={"/hero-banner.jpg"}
-          fill
-          className="object-cover object-top"
-          alt="background scenery image"
-        ></Image>
       </div>
     </div>
   );
