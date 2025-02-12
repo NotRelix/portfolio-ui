@@ -1,15 +1,10 @@
 import Image from "@/components/my-image";
-import { Home, Edit, Globe, Info } from "lucide-react";
-import Link from "next/link";
-import Navbar from "@/components/layout/Navbar";
-import ProfileCard from "@/components/layout/ProfileCard";
 import { FaLaptop } from "react-icons/fa";
 import { HiMiniCodeBracket } from "react-icons/hi2";
 import { IoLogoJavascript, IoMdPhonePortrait } from "react-icons/io";
 import { FiDatabase } from "react-icons/fi";
 import { FaComputer, FaLocationDot } from "react-icons/fa6";
 import { BsEarbuds } from "react-icons/bs";
-import Header from "@/components/layout/Header";
 
 export default function HomePage() {
   const skills = [
