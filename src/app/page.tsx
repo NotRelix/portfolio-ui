@@ -95,8 +95,8 @@ export default function HomePage() {
         <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
           Cool Pictures
         </h1>
-        <div className="grid grid-cols-3 grid-rows-2 h-[36rem] w-full gap-2">
-          <div className="col-span-1 row-span-2 relative w-full h-full overflow-hidden rounded-xl">
+        <div className="grid aspect-[3/2] grid-cols-3 grid-rows-2 max-w-[72rem] w-full gap-2">
+          <div className="col-span-1 row-span-2 relative overflow-hidden rounded-xl">
             <Image
               src="/pictures/kyoto-japan.jpeg"
               fill
@@ -109,7 +109,7 @@ export default function HomePage() {
             </span>
           </div>
           <div className="col-span-1 row-span-1">
-            <div className="w-full h-full relative overflow-clip rounded-xl">
+            <div className="w-full h-full relative overflow-hidden rounded-xl">
               <Image
                 src="/pictures/shanghai-china.jpeg"
                 fill
@@ -123,7 +123,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="col-span-1 row-span-1">
-            <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
+            <div className="main-picture w-full h-full relative overflow-hidden rounded-xl">
               <Image
                 src="/pictures/el-nido-philippines.jpeg"
                 fill
@@ -137,7 +137,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="col-span-1 row-span-1">
-            <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
+            <div className="main-picture w-full h-full relative overflow-hidden rounded-xl">
               <Image
                 src="/pictures/new-york-usa.jpeg"
                 fill
@@ -151,7 +151,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="col-span-1 row-span-1">
-            <div className="main-picture w-full h-full relative overflow-clip rounded-xl">
+            <div className="main-picture w-full h-full relative overflow-hidden rounded-xl">
               <Image
                 src="/pictures/london-uk.jpeg"
                 fill

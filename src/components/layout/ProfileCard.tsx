@@ -31,7 +31,7 @@ const ProfileCard = () => {
         <h1 className="text-3xl font-bold">Reece Lim</h1>
       </div>
       <div className="mr-auto md:m-auto justify-start flex flex-col gap-2">
-        <p className="font-bold text-2xl md:text-base md:text-center">My Socials</p>
+        <p className="border-l-[6px] border-blue-400 px-2 md:border-none font-bold text-2xl md:text-base md:text-center">My Socials</p>
         <div className="flex gap-2">
           {contacts.map((item, index) => {
             return (
