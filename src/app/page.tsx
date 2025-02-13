@@ -95,7 +95,7 @@ export default function HomePage() {
         <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
           Cool Pictures
         </h1>
-        <div className="grid aspect-[3/2] grid-cols-3 grid-rows-2 max-w-[72rem] w-full gap-2">
+        <div className="grid max-sm:aspect-[1/5] sm:aspect-[2/3] md:aspect-[3/2] max-sm:grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2 max-w-[72rem] w-full gap-2">
           <div className="col-span-1 row-span-2 relative overflow-hidden rounded-xl">
             <Image
               src="/pictures/kyoto-japan.jpeg"

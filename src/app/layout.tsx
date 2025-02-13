@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <div className="flex flex-col w-full sm:max-w-7xl mx-auto">
           <Header />
-          <main className="flex flex-col gap-2 px-12">
+          <main className="flex flex-col gap-2 sm:px-12">
             <Navbar />
             {children}
           </main>
