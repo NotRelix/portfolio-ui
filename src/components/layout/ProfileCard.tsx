@@ -18,7 +18,7 @@ const ProfileCard = () => {
   ];
 
   return (
-    <div className="bg-neutral-900 flex-grow-[1] p-6 flex md:flex-col items-center gap-4 md:justify-center">
+    <div className="hidden sm:visible bg-neutral-900 flex-grow-[1] p-6 sm:flex md:flex-col items-center gap-4 md:justify-center">
       <div className="flex flex-col md:items-center gap-2 mr-auto md:m-auto">
         <div className="relative overflow-clip size-24 md:rounded-full rounded-2xl">
           <Image
