@@ -1,11 +1,13 @@
 import Image from "@/components/my-image";
-import { FaLaptop } from "react-icons/fa";
+import { FaLaptop, FaReact, FaRegKeyboard } from "react-icons/fa";
 import { HiMiniCodeBracket } from "react-icons/hi2";
 import { IoLogoJavascript, IoMdPhonePortrait } from "react-icons/io";
 import { FiDatabase } from "react-icons/fi";
 import { FaComputer, FaLocationDot } from "react-icons/fa6";
 import { BsEarbuds } from "react-icons/bs";
 import ProfileCard from "@/components/layout/ProfileCard";
+import { HiOutlineMicrophone } from "react-icons/hi";
+import { MdOutlineChair, MdOutlineMouse } from "react-icons/md";
 
 export default function HomePage() {
   const skills = [
@@ -16,6 +18,10 @@ export default function HomePage() {
     {
       icon: IoLogoJavascript,
       title: "JavaScript",
+    },
+    {
+      icon: FaReact,
+      title: "React",
     },
     {
       icon: FiDatabase,
@@ -40,6 +46,22 @@ export default function HomePage() {
       icon: BsEarbuds,
       title: "Galaxy Buds 2",
     },
+    {
+      icon: HiOutlineMicrophone,
+      title: "Razer Siren",
+    },
+    {
+      icon: FaRegKeyboard,
+      title: "Mechanical Keyboard",
+    },
+    {
+      icon: MdOutlineMouse,
+      title: "Gaming Mouse",
+    },
+    {
+      icon: MdOutlineChair,
+      title: "Gaming Chair",
+    }
   ];
 
   return (
@@ -59,7 +81,7 @@ export default function HomePage() {
         <h1 className="border-l-[6px] border-blue-400 px-2 font-bold text-3xl">
           Skills
         </h1>
-        <div className="flex flex-wrap gap-2">
+        <div className="grid 2xs:grid-cols-2 md-plus:grid-cols-4 gap-2">
           {skills.map((item, index) => {
             return (
               <div
