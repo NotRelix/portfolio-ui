@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className="flex flex-col justify-center items-center gap-4 p-8">
-      <div className="relative size-32 rounded-full overflow-clip">
+    <header className="flex flex-col justify-center items-center gap-4 p-8 pt-14">
+      <div className="relative size-28 rounded-full overflow-clip">
         <Image
           src={"/profile-pic.jpg"}
           fill
