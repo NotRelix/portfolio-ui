@@ -53,7 +53,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-neutral-900 h-12 flex justify-between sm:justify-center items-center">
+    <nav className="sticky top-0 z-50 bg-neutral-900 h-12 flex justify-between sm:justify-center items-center">
       <div className="flex h-full">
         {navLinks.map((item, index) => {
           return (
