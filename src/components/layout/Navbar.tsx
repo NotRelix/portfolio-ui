@@ -73,7 +73,7 @@ const Navbar = () => {
       </div>
       <div className={`flex flex-col items-center backdrop-blur-md backdrop-brightness-50 sm:hidden fixed top-0 right-0 z-50 w-full h-full transition-transform ease-in-out duration-300 ${openMenu ? "translate-x-0" : "translate-x-full"
         }`}>
-        <RxCross2 onClick={onMenuPress} className="size-12 p-2 stroke-[0.5] self-end" />
+        <RxCross2 onClick={onMenuPress} className="size-12 p-2 stroke-[0.5] self-end hover:bg-neutral-700 transition-all ease-in-out" />
         <div className="flex flex-col items-center w-full h-full px-4 gap-4">
           <div className="relative size-32 overflow-hidden rounded-full">
             <Image
